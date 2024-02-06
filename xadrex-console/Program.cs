@@ -1,6 +1,6 @@
 ﻿using System;
 using tabuleiro;
-
+using xadrez;
 namespace xadrex_console
 {
     class Program
@@ -9,6 +9,9 @@ namespace xadrex_console
 
             Tabuleiro tab = new Tabuleiro(8,8);
 
+            tab.colocarpeca(new Torre(tab,Cor.Preta),new Posicao(0,0));
+            tab.colocarpeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
+            tab.colocarpeca(new Rei(tab, Cor.Preta), new Posicao(2, 4));
             Tela.ImprimirTabuleiro(tab);
 
             Console.ReadLine();

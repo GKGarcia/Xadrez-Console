@@ -16,7 +16,7 @@ namespace xadrex_console
                     }
                     else
                     {
-                        Console.Write(tab.peca(i, j) + " ");
+                        Console.Write(tab.peca(i,j) + " ");
                     }
                     
                 }
