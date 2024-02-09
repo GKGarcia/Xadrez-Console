@@ -7,12 +7,9 @@ namespace xadrex_console
     {
         static void Main(string[] args) {
 
-            Tabuleiro tab = new Tabuleiro(8,8);
+           PosicaoXadrez pos = new PosicaoXadrez('a',1);
 
-            tab.colocarpeca(new Torre(tab,Cor.Preta),new Posicao(0,0));
-            tab.colocarpeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
-            tab.colocarpeca(new Rei(tab, Cor.Preta), new Posicao(2, 4));
-            Tela.ImprimirTabuleiro(tab);
+            Console.WriteLine(pos);
 
             Console.ReadLine();
         }
