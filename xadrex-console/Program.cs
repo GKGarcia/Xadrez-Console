@@ -10,16 +10,13 @@ namespace xadrex_console
             
                 PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                while (!partida.termida)
+                while (!partida.terminada)
                 {
 
                 try
                 {
                     Console.Clear();
-                    Tela.imprimirTabuleiro(partida.tab);
-                    Console.WriteLine();
-                    Console.WriteLine("Turno: " + partida.turno);
-                    Console.WriteLine("Aguardadando jogada " + partida.jogadorAtual);
+                    Tela.imprimirPartida(partida);
 
                     Console.WriteLine();
                     Console.Write("Origem:");
