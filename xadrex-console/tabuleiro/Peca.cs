@@ -46,5 +46,10 @@ namespace tabuleiro
             qntdemovimentos++;
         }
 
+        public void decrementarQntdeMovimentos()
+        {
+            qntdemovimentos--;
+        }
+
     }
 }
