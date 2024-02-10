@@ -9,14 +9,21 @@ namespace xadrex_console
 
             try
             {
-                Tabuleiro tab = new Tabuleiro(8, 8);
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                tab.colocarpeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
-                tab.colocarpeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
-                tab.colocarpeca(new Rei(tab, Cor.Preta), new Posicao(0, 2));
+                while (!partida.termida)
+                {
+                    Console.Clear();
+                    Tela.imprimirTabuleiro(partida.tab);
 
-                tab.colocarpeca(new Torre(tab, Cor.Branca), new Posicao(3, 5));
-                Tela.ImprimirTabuleiro(tab);
+                    Console.WriteLine();
+                    Console.Write("Origem:");
+                    Posicao origem = Tela.lerPosicaoXadrez().ToPosicao();
+                    Console.Write("Destino:");
+                    Posicao destino = Tela.lerPosicaoXadrez().ToPosicao();
+
+                    partida.executaMovimento(origem, destino);
+                }
 
             }catch (TabuleiroException e) {
                 Console.WriteLine(e.Message);
